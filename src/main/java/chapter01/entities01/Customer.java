@@ -1,4 +1,4 @@
-package entities01;
+package chapter01.entities01;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,5 @@
-package entities03;
+package chapter02.entities03;
 
-import java.util.Calendar;
 import java.util.Date;
 
 /**

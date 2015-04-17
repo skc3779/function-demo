@@ -1,4 +1,4 @@
-package entities03;
+package chapter01.entities01;
 
 /**
  * Created by seokangchun on 15. 3. 29..
