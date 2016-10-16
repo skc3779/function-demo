@@ -31,6 +31,7 @@ allprojects {
     apply plugin: 'propdeps-maven'
     apply plugin: 'propdeps-idea'
     apply plugin: 'propdeps-eclipse'
+    apply plugin: 'groovy'
 
     sourceCompatibility = rootProject.ext.javaVersion
     targetCompatibility = rootProject.ext.javaVersion
@@ -82,6 +83,7 @@ allprojects {
         compile "org.slf4j:jcl-over-slf4j:${rootProject.ext.slf4jVersion}"
         compile "org.slf4j:log4j-over-slf4j:${rootProject.ext.slf4jVersion}"
         compile "org.slf4j:slf4j-api:${rootProject.ext.slf4jVersion}"
+        compile 'org.codehaus.groovy:groovy-all:2.4.3'
 
         provided 'org.projectlombok:lombok:1.12.6'
         testCompile "junit:junit:4.11"
