@@ -1,4 +1,4 @@
-package chapter02.entities03;
+package function.entities01;
 
 import java.util.Date;
 

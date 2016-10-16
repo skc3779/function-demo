@@ -1,4 +1,4 @@
-package chapter02.entities02;
+package function.entities02;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,8 +18,8 @@ public class Customer {
     public String domain = "";
     public Boolean enabled = true;
 
-    public chapter02.entities02.Contract contract;
-    public ArrayList<chapter02.entities02.Contact> contacts = new ArrayList<chapter02.entities02.Contact>();
+    public Contract contract;
+    public ArrayList<Contact> contacts = new ArrayList<Contact>();
 
 
     public Customer() {

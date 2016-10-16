@@ -84,6 +84,9 @@ allprojects {
         compile "org.slf4j:log4j-over-slf4j:${rootProject.ext.slf4jVersion}"
         compile "org.slf4j:slf4j-api:${rootProject.ext.slf4jVersion}"
         compile 'org.codehaus.groovy:groovy-all:2.4.3'
+        compile 'com.fasterxml.jackson.core:jackson-core:2.8.3'
+        compile 'com.fasterxml.jackson.core:jackson-databind:2.8.3'
+        compile group: 'com.google.guava', name: 'guava', version: '19.0'
 
         provided 'org.projectlombok:lombok:1.12.6'
         testCompile "junit:junit:4.11"

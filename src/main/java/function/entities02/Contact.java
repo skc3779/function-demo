@@ -1,4 +1,4 @@
-package chapter02.entities02;
+package function.entities02;
 
 /**
  * Created by seokangchun on 15. 3. 29..
