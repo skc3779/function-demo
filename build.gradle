@@ -27,11 +27,13 @@ version = '1.0'
 allprojects {
     apply plugin: 'java'
     apply plugin: 'idea'
+    apply plugin: 'groovy'
+    apply plugin: 'scala'
     apply plugin: 'propdeps'
     apply plugin: 'propdeps-maven'
     apply plugin: 'propdeps-idea'
     apply plugin: 'propdeps-eclipse'
-    apply plugin: 'groovy'
+
 
     sourceCompatibility = rootProject.ext.javaVersion
     targetCompatibility = rootProject.ext.javaVersion
@@ -46,6 +48,8 @@ allprojects {
         test.java.srcDirs = ['src/test/java']
         main.resources.srcDirs = ['src/main/resources', "src/main/resources-" + hostname]
         test.resources.srcDirs = ['src/test/resources', "src/test/resources-" + hostname]
+        main.scala.srcDirs = ['src/main/scala']
+        test.scala.srcDirs = ['src/test/scala']
     }
 //    sourceSets.all {
 //        println 'sourceSets.all : ' + name
@@ -75,6 +79,7 @@ allprojects {
     }
 
     dependencies {
+
         compile 'org.slf4j:slf4j-api:1.7.6'
         compile 'org.slf4j:jcl-over-slf4j:1.7.6'
         compile 'ch.qos.logback:logback-classic:1.0.13'
@@ -88,6 +93,14 @@ allprojects {
         compile 'com.fasterxml.jackson.core:jackson-databind:2.8.3'
         compile group: 'com.google.guava', name: 'guava', version: '19.0'
 
+        //groovy
+        compile 'org.codehaus.groovy:groovy-all:2.4.7'
+        //scala
+        compile 'org.scala-lang:scala-library:2.11.8'
+
+        testCompile "org.spockframework:spock-core:1.0-groovy-2.4"
+        testCompile "org.spockframework:spock-spring:1.0-groovy-2.4"
+
         provided 'org.projectlombok:lombok:1.12.6'
         testCompile "junit:junit:4.11"
         testCompile 'org.mockito:mockito-all:1.9.5'
@@ -95,5 +108,6 @@ allprojects {
         testCompile 'org.unitils:unitils-core:3.4.2'
         testCompile "org.springframework:spring-test:${rootProject.ext.springVersion}"
     }
+
     [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 }
